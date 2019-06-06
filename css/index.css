@@ -333,9 +333,11 @@ img {
   font-size: 2rem;
   padding: 8%;
   text-align: center;
-  /* &:hover {
-    color: lighten(@bgcolor, 30%)
-  } */
+}
+.content-pick .btn:hover {
+  display: block;
+  background-color: #cf331a;
+  padding: 6px 4px;
 }
 @media (max-width: 500px) {
   .content-pick {
@@ -358,4 +360,3 @@ img {
     text-align: center;
   }
 }
-/**/
