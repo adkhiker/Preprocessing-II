@@ -1,1 +1,65 @@
 // Mixins in here
+.flex-settings {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.format-links {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+}
+
+.format-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  border-bottom: 2px dashed @navigation-border;
+}
+
+//Parametric Mixin
+.fix-buttons(@bgcolor,@fontcolor) {
+  background-color: @bgcolor;
+  border: 1px solid @bgcolor;
+  border-radius: 10px 10px 10px 10px;
+  color: @fontcolor;
+  font-size: 2rem;
+  padding: 8%;
+  text-align: center;
+  &:hover {
+    animation-name: background-color;
+    animation-duration: @seconds;
+    animation-iteration-count: @iterations;
+    padding: 6px 4px;
+    /* display: block;
+    background-color: lighten(@button-animation, @percent);
+    padding: 6px 4px; */
+  }
+
+ @keyframes background-color {
+    0% {
+      background-color: lighten(@1st-color, @percent);
+    }
+    16.7% {
+      background-color: #ffd400;
+    }
+    33.3% {
+      background-color: #48ff00;
+    }
+    50% {
+      background-color: #ffd400;
+    }
+    66.9% {
+      background-color: #48ff00;
+    }
+    83.4% {
+      background-color: #4586ff;
+    }
+    100% {
+      background-color: #b22eff;
+    }
+  }
+}
