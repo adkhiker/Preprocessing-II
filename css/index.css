@@ -335,9 +335,36 @@ img {
   text-align: center;
 }
 .content-pick .btn:hover {
-  display: block;
-  background-color: #cf331a;
+  animation-name: background-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
   padding: 6px 4px;
+  /* display: block;
+    background-color: lighten(@button-animation, @percent);
+    padding: 6px 4px; */
+}
+@keyframes background-color {
+  0% {
+    background-color: #ff4848;
+  }
+  16.7% {
+    background-color: #ffd400;
+  }
+  33.3% {
+    background-color: #48ff00;
+  }
+  50% {
+    background-color: #ffd400;
+  }
+  66.9% {
+    background-color: #48ff00;
+  }
+  83.4% {
+    background-color: #4586ff;
+  }
+  100% {
+    background-color: #b22eff;
+  }
 }
 @media (max-width: 500px) {
   .content-pick {
